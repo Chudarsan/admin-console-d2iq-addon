@@ -1,0 +1,28 @@
+---
+apiVersion: kubeaddons.mesosphere.io/v1beta1
+kind: ClusterAddon
+metadata:
+  name: admin-console
+  labels:
+    kubeaddons.mesosphere.io/name: admin-console
+  annotations:
+    catalog.kubeaddons.mesosphere.io/addon-revision: "0.0.1"
+    appversion.kubeaddons.mesosphere.io/admin-console: "0.0.1"
+    # values.chart.helm.kubeaddons.mesosphere.io/cockroachdb: "https://raw.githubusercontent.com/helm/charts/dfea2ba119be53f0d3f7d70def66e54f9e259768/stable/cockroachdb/values.yaml"
+spec:
+  kubernetes:
+    minSupportedVersion: v1.15.0
+  cloudProvider:
+    - name: aws
+      enabled: true
+    - name: azure
+      enabled: true
+    - name: gcp
+      enabled: true
+    - name: docker
+      enabled: false
+    - name: none
+      enabled: true
+  chartReference:
+    chart: stable/admin-console
+    version: 0.0.1

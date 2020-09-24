@@ -1,0 +1,12 @@
+---
+admin-console:
+  display_name: admin-console
+  description: admin-console
+  logo: admin-console/logo.png
+  category: admin-console
+  overview: admin-console/overview.md
+  # resources:
+  #   links:
+  #     - type: support
+  #       title: Support Resources
+  #       link: https://www.cockroachlabs.com/docs/stable/support-resources.html
